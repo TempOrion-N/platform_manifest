@@ -11,11 +11,11 @@ To get started with OrionOS, you'll need to get familiar with
 To initialize your local repository using the OrionOS trees, use this command:
 
 
-	repo init -u git://github.com/TeamOrion/platform_manifest.git -b 7.1.1
+	repo init -u git://github.com/TempOrion-N/platform_manifest.git -b 7.1.1
 
 
 Then sync up with this command:
 
-	repo sync
+	repo sync --force-sync --no-tags --no-clone-bundle
 
 You may track qcom common repo locally, as some devices need different ones.

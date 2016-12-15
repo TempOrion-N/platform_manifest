@@ -10,6 +10,10 @@
   <remote name="orion"
 	  fetch="https://github.com/TeamOrion"
 	  revision="7.1.1" />
+	  
+  <remote name="ton"
+	  fetch="https://github.com/TempOrion-N"
+	  revision="7.1.1" />
 
   <remote name="to-d"
 	  fetch="https://github.com/TeamOrion-Devices"
@@ -30,30 +34,30 @@
            sync-j="4" />
 
 <!-- Orion Stuff -->
-  <project path="vendor/orion" name="vendor_orion" remote="orion" />
-  <project path="Documentation" name= "TeamOrion/Documentation" remote="github" revision="n" >
+  <project path="vendor/orion" name="vendor_orion" remote="ton" />
+  <project path="Documentation" name= "Documentation" remote="ton" revision="n" >
   <copyfile src="orion.sh" dest="orion.sh" />
   </project>
-  <project path="build" name="build" groups="pdk,tradefed" remote="orion" >
+  <project path="build" name="build" groups="pdk,tradefed" remote="ton" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="art" name="art" groups="pdk" remote="orion" />
-  <project path="bionic" name="bionic" groups="pdk" remote="orion" />
+  <project path="art" name="art" groups="pdk" remote="ton" />
+  <project path="bionic" name="bionic" groups="pdk" remote="ton" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="orion" />
   <project path="external/chromium-webview" name="external_chromium-webview" groups="pdk" remote="orion" clone-depth="1" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="orion" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="orion" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="orion" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="ton" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="ton" />
   <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" remote="orion" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk" remote="orion" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="orion" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="ton" />
   <project path="frameworks/rs" name="frameworks_rs" groups="pdk" remote="orion" />
   <project path="frameworks/support" name="frameworks_support" groups="pdk-cw-fs,pdk-fs" remote="orion" />
   <project path="hardware/broadcom/wlan" name="hardware_broadcom_wlan" groups="pdk,broadcom_wlan" remote="orion" />
   <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="orion" />
   <project path="libcore" name="libcore" groups="pdk" remote="orion" />
-  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="orion" />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="ton" />
   <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="orion" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="orion"/>
   <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" groups="pdk-fs" remote="orion" />
@@ -63,18 +67,18 @@
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk-fs" remote="orion" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="orion" />
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="orion" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="orion" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="ton" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="orion" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="orion" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="orion" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="orion" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="orion" />
-  <project path="system/bt" name="system_bt" groups="pdk" remote="orion" />
-  <project path="system/core" name="system_core" groups="pdk" remote="orion" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="orion" />
+  <project path="system/bt" name="system_bt" groups="pdk" remote="ton" />
+  <project path="system/core" name="system_core" groups="pdk" remote="ton" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="ton" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="orion" />
-  <project path="system/extras" name="system_extras" groups="pdk" remote ="orion" />
-  <project path="system/media" name="system_media" groups="pdk" remote="orion" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote ="ton" />
+  <project path="system/media" name="system_media" groups="pdk" remote="ton" />
   <project path="external/ipsec-tools" name="external_ipsec-tools" groups="pdk-cw-fs,pdk-fs" remote="orion" />
 
 <!-- 3rd Party Additions -->
@@ -585,11 +589,7 @@
   <project path="packages/apps/StorageManager" name="android_packages_apps_StorageManager" remote="cm" />
   
   <!-- UBERTC -->
-  <project path="prebuilts/clang/host/linux-x86/sdclang-3.8" remote="bb" name="mdalexca/sdclang-3.8" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="mdalexca/aarch64-linux-android-4.9" remote="bb" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="mdalexca/arm-eabi-4.9" remote="bb" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="mdalexca/arm-linux-androideabi-4.9" remote="bb" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.x" name="mdalexca/aarch64-linux-android-6.x" remote="bb" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="mdalexca/arm-eabi-6.x" remote="bb" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.x" name="uberroms/arm-linux-androideabi-6.x" remote="bb" clone-depth="1" />
 </manifest>
